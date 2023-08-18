@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+*, *::before,
+*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    font-size: 15px;
+    position: relative;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.hideMenu{
+    display: none;
+}
+
+.mobileMenu{
+    display: flex;
+    flex-direction: column; 
+    gap: 1.3rem;
+    width: 15.2rem;
+    height: 50rem;
+    position: absolute;
+    background-color: #ffffff;
+    right: 0;
+    top: 0;
+    animation: openAnimate 2s ease-in;
+}
+
+@keyframes openAnimate{
+    0% {right:-15.2rem; top:0px;}
+   50% {right:0px; top:0px;}
+}
+
+.home{
+    margin-top: 10rem;
+}
+
+.mobileMenu a{
+    text-decoration: none;
+    font-weight: 400;
+    color: #000000;
+    margin-left: 1.5rem;
+}
+
+.mobileMenu a:hover{
+    color:  hsl(35, 77%, 62%);
+}
+
+.icon-menu-close{
+    width: 1.8rem;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+}
+
+
+.desktopImage{
+    display: none;
+}
+
+.section-1 img{
+    width: 20rem;
+    height: 18rem;
+    margin: 3rem 0 1.5rem 0;
+}
+
+h1{
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.hero p{
+    color: hsl(236, 13%, 42%);
+    font-size: 0.9rem;
+    line-height: 1.3rem;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+}
+
+button{
+    outline: none;
+    border: none;
+    background: hsl(5, 85%, 63%);
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    padding: 1rem 1.750rem;
+    margin-bottom: 3rem;
+    cursor: pointer;
+}
+
+button:hover {
+    color: #ffffff;
+    background: #000000;
+
+}
+
+.section-2{
+    background: hsl(240, 100%, 5%);
+    padding: 2rem 1.5rem;
+    margin-bottom: 5rem;
+}
+
+.section-2 h2{
+    font-size: 1.8rem;
+    color: hsl(35, 77%, 62%);
+}
+
+.section-2 h3{
+    color: #ffffff;
+    margin-top: 2rem;
+}
+
+.section-2 p{
+    color: hsl(233, 8%, 79%);
+    font-size: 0.875rem;
+    margin-top: 1rem;
+    line-height: 1.6rem;
+}
+
+hr{
+    border: 0.5px solid hsl(236, 13%, 42%);
+    margin-top: 2.2rem;
+}
+
+.section-2 h3:hover,
+.section-3 h4:hover{
+    color: hsl(35, 77%, 62%);
+    cursor: pointer;
+}
+
+.flex{
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.flex img{
+    width: 8rem;
+    height: 8.5rem;
+}
+
+.flex span{
+    color: hsl(233, 8%, 79%);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.flex h4{
+    margin-block: 0.9rem;
+}
+
+.flex p{
+    color: hsl(236, 13%, 42%);
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+}
+
+
+@media screen and (min-width: 1440px) {
+    body {
+      padding: 4rem 8rem;
+    }
+
+    .icon-menu{
+        display: none;
+    }
+
+    .mobileMenu, .icon-menu-close{
+        display: none;
+    }
+
+    .home{
+        margin-top: 0;
+    }
+
+    .desktopMenu{
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        font-size: 1.1rem;
+    }
+    .desktopMenu a{
+        text-decoration: none;
+        color: hsl(236, 13%, 42%);
+        font-weight: 400;
+    }
+
+    .desktopMenu a:hover{
+        color: hsl(35, 77%, 62%);
+    }
+
+      .area1 {
+        grid-area: one;
+      }
+      .area2 {
+        grid-area: two;
+      }
+      .area3 {
+        grid-area: three;
+      }
+      .area4 {
+        grid-area: four;
+      }
+
+    .grid{
+        display: grid;
+        grid-template-areas: 'one one four'
+                             'two three four';
+        gap: 2rem;
+    }
+
+    .mobileImage{
+        display: none;
+    }
+
+    .section-1 .desktopImage{
+        display: flex;
+        width: 100%;
+        height: 20rem;
+    }
+
+    h1{
+        font-size: 4rem;
+        line-height: 4rem;
+        margin-top: -1rem;
+    }
+
+    .hero p{
+        margin-top: -1rem;
+    }
+
+    .section-2{
+        margin: 3rem 0 3.2rem 0;
+    }
+
+    .section-2 h2{
+        font-size: 2.6rem;
+    }
+
+    .section-2 h3{
+        font-size: 1.4rem;
+    }
+
+    .section-2 p{
+        font-size: 1.05rem;
+    }
+
+    .section-3{
+        display: flex;
+        gap: 2rem;
+        margin-top: 2rem;
+        margin-left: 0.8rem;
+    }
+
+    .section-3 h4{
+        font-size: 1.1rem;
+        font-weight: 800;
+    }
+
+    .section-3 p{
+        font-size: 15px;
+    }
+
+  }
